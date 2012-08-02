@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Łukasz Korecki"]
   s.email       = ["lukasz@coffeesounds.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{guard plugin for generating ctags}
+  s.description = %q{guard-ctags allows to specify which tag generator needs to be used for generating tags file for a given file type. This way one can use regular excuberant-ctags for ruby, jsctags for javascript and CoffeeTags for CoffeeScript}
 
   s.rubyforge_project = "guard-ctags"
 
@@ -17,8 +17,5 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_runtime_dependency "guard"
 end
