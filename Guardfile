@@ -7,6 +7,6 @@ end
 
 
 guard 'ctags', {'.rb' => 'ctags', '.coffee' => 'coffeetags'} do
-  require 'guard-ctags'
   watch(%r{^lib/(.+)\.rb$})
+  watch(%r{\w*.coffee})
 end
